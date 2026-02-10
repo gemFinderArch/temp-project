@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Huel Order Checklist</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,sans-serif;background:#0d1117;color:#e6edf3;padding:20px;max-width:600px;margin:0 auto}
+h1{font-size:1.4rem;margin-bottom:18px;color:#58a6ff}
+h2{font-size:1rem;margin:18px 0 8px;color:#8b949e;border-bottom:1px solid #21262d;padding-bottom:4px}
+.item{display:flex;align-items:center;padding:6px 0;gap:10px}
+.item input[type=checkbox]{width:18px;height:18px;accent-color:#238636;cursor:pointer;flex-shrink:0}
+.item label{cursor:pointer;flex:1}
+.item.checked label{text-decoration:line-through;color:#484f58}
+.qty{color:#8b949e;font-size:.85rem;min-width:28px}
+.price{color:#8b949e;font-size:.85rem;margin-left:auto}
+.total{margin-top:24px;padding:12px;background:#161b22;border-radius:8px;text-align:center;font-size:.95rem;color:#8b949e}
+.total strong{color:#58a6ff}
+.progress{margin-top:12px;text-align:center;color:#58a6ff;font-size:.9rem}
+</style>
+</head>
+<body>
+<h1>Huel Order Checklist</h1>
+<div class="progress" id="prog"></div>
+
+<h2>Hot &amp; Savoury Meal Packs (11 packs) &mdash; 249,48&euro;</h2>
+<div class="item"><input type="checkbox" id="c1"><span class="qty">1x</span><label for="c1">Katsu Curry Noodles</label><span class="price">22,68&euro;</span></div>
+<div class="item"><input type="checkbox" id="c2"><span class="qty">1x</span><label for="c2">Chick'n &amp; Mushroom Pasta</label><span class="price">22,68&euro;</span></div>
+<div class="item"><input type="checkbox" id="c3"><span class="qty">1x</span><label for="c3">Mexican Chilli</label><span class="price">22,68&euro;</span></div>
+<div class="item"><input type="checkbox" id="c4"><span class="qty">2x</span><label for="c4">Mac &amp; Cheeze</label><span class="price">45,36&euro;</span></div>
+<div class="item"><input type="checkbox" id="c5"><span class="qty">1x</span><label for="c5">Hoisin 'Duck' Noodles</label><span class="price">22,68&euro;</span></div>
+<div class="item"><input type="checkbox" id="c6"><span class="qty">1x</span><label for="c6">Korean BBQ Noodles</label><span class="price">22,68&euro;</span></div>
+<div class="item"><input type="checkbox" id="c7"><span class="qty">1x</span><label for="c7">Pasta Bolognese</label><span class="price">22,68&euro;</span></div>
+<div class="item"><input type="checkbox" id="c8"><span class="qty">1x</span><label for="c8">Cajun Pasta</label><span class="price">22,68&euro;</span></div>
+<div class="item"><input type="checkbox" id="c9"><span class="qty">1x</span><label for="c9">Thai Green Curry</label><span class="price">22,68&euro;</span></div>
+<div class="item"><input type="checkbox" id="c10"><span class="qty">1x</span><label for="c10">Madras</label><span class="price">22,68&euro;</span></div>
+
+<h2>Ready-to-drink (2 packs) &mdash; 81&euro;</h2>
+<div class="item"><input type="checkbox" id="c11"><span class="qty">1x</span><label for="c11">Banana v1.0</label><span class="price">40,50&euro;</span></div>
+<div class="item"><input type="checkbox" id="c12"><span class="qty">1x</span><label for="c12">Berry v1.0</label><span class="price">40,50&euro;</span></div>
+
+<h2>Complete Protein Scoop &mdash; 0,36&euro;</h2>
+<div class="item"><input type="checkbox" id="c13"><span class="qty">1x</span><label for="c13">Clear</label><span class="price">0,36&euro;</span></div>
+
+<h2>Daily Greens &mdash; 49,50&euro;</h2>
+<div class="item"><input type="checkbox" id="c14"><span class="qty">1x</span><label for="c14">Original</label><span class="price">49,50&euro;</span></div>
+
+<h2>Bars &mdash; 11,92&euro;</h2>
+<div class="item"><input type="checkbox" id="c15"><span class="qty">5x</span><label for="c15">Bars</label><span class="price">11,92&euro;</span></div>
+
+<h2>Accessories</h2>
+<div class="item"><input type="checkbox" id="c16"><span class="qty">1x</span><label for="c16">Reusable Instant Meal Pot (Black)</label><span class="price">5,40&euro;</span></div>
+<div class="item"><input type="checkbox" id="c17"><span class="qty">1x</span><label for="c17">Reusable Instant Meal Pot (Black)</label><span class="price">0&euro;</span></div>
+<div class="item"><input type="checkbox" id="c18"><span class="qty">1x</span><label for="c18">Huel Tote Bag</label><span class="price">6,30&euro;</span></div>
+<div class="item"><input type="checkbox" id="c19"><span class="qty">1x</span><label for="c19">Scoop (White)</label><span class="price">0,36&euro;</span></div>
+
+<h2>Single Ready-to-drink &mdash; 4,32&euro;</h2>
+<div class="item"><input type="checkbox" id="c20"><span class="qty">1x</span><label for="c20">Vanilla</label><span class="price">4,32&euro;</span></div>
+
+<h2>Hot &amp; Savoury Pots (3 pots) &mdash; 85,44&euro;</h2>
+<div class="item"><input type="checkbox" id="c21"><span class="qty">1x</span><label for="c21">Katsu Curry Noodles</label><span class="price">28,48&euro;</span></div>
+<div class="item"><input type="checkbox" id="c22"><span class="qty">1x</span><label for="c22">Hoisin 'Duck' Noodles</label><span class="price">28,48&euro;</span></div>
+<div class="item"><input type="checkbox" id="c23"><span class="qty">1x</span><label for="c23">Korean BBQ Noodles</label><span class="price">28,48&euro;</span></div>
+
+<div class="total">Order Total: <strong>493,78&euro;</strong></div>
+
+<script>
+const boxes=document.querySelectorAll('input[type=checkbox]');
+const KEY='huel-check';
+const saved=JSON.parse(localStorage.getItem(KEY)||'{}');
+boxes.forEach(cb=>{
+  if(saved[cb.id])cb.checked=true;
+  cb.closest('.item').classList.toggle('checked',cb.checked);
+  cb.addEventListener('change',()=>{
+    saved[cb.id]=cb.checked;
+    localStorage.setItem(KEY,JSON.stringify(saved));
+    cb.closest('.item').classList.toggle('checked',cb.checked);
+    prog();
+  });
+});
+function prog(){
+  const done=[...boxes].filter(c=>c.checked).length;
+  document.getElementById('prog').textContent=done+' / '+boxes.length+' items checked';
+}
+prog();
+</script>
+</body>
+</html>
